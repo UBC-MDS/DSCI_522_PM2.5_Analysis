@@ -1,5 +1,5 @@
 # DSCI_522_Wilson_Ting
-Data analysis project for DSCI 522
+Data analysis project for DSCI 522 - Analyzing PM 2.5 of Beijing and Shanghai
 
 ## Team members
 
