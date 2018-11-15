@@ -11,20 +11,19 @@ Data analysis project for DSCI 522 - Analyzing PM 2.5 of Beijing and Shanghai
 ## Data
 - Source: [PM2.5 Data of Five Chinese Cities from Kaggle.com](https://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities)
 
-### Proof of loading data
-
-```
-Rscript script/Import_data.R
-```
-
-![](./img/screenshot_importing_data.png)
-
 - Context
 <br> PM2.5 readings are often included in air quality reports from environmental authorities and companies. PM2.5 refers to atmospheric particulate matter (PM) that have a diameter less than 2.5 micrometers. In other words, it's used as a measure of pollution. 
 
 - Content
 <br> The time period for this data is between Jan 1st, 2010 to Dec 31st, 2015. Missing data are denoted as NA. 
 
+### Proof of loading data
+
+```
+Rscript script/Import_data.R
+```
+
+![](./img/screenshot_import_data.png)
 
 ## Question
 
