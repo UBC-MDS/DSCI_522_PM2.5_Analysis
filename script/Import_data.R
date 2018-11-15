@@ -10,7 +10,7 @@
 
 suppressPackageStartupMessages(library(tidyverse))
 
-beijing_pm <- read.csv("../data/BeijingPM20100101_20151231.csv")
-shanghai_pm <- read.csv("../data/ShanghaiPM20100101_20151231.csv")
+beijing_pm <- read.csv("data/BeijingPM20100101_20151231.csv")
+shanghai_pm <- read.csv("data/ShanghaiPM20100101_20151231.csv")
 
 head(beijing_pm)
