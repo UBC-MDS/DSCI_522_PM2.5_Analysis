@@ -27,8 +27,9 @@ Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai
 ## Plan
 
 
-$H_0$: The average PM2.5 in Beijing is the same as the average PM2.5 in Shanghai.
-$H_{/alpha}$: The average PM2.5 in Beijing is NOT the same as the average PM2.5 in Shanghai.
+Null Hypothesis: The average PM2.5 in Beijing is the same as the average PM2.5 in Shanghai.
+
+Alternative Hypothesis: The average PM2.5 in Beijing is NOT the same as the average PM2.5 in Shanghai.
 
 To effectively compare the average PM2.5 in Beijing and Shanghai, we plan to do a **hypothesis test** over the two datasets. Also, two-sample t test will be applied to our question. We have learnt about how to do this in our DSCI 552 class.
 
