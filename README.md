@@ -17,13 +17,6 @@ Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai
 - Content
 <br> The time period for this data is between Jan 1st, 2010 to Dec 31st, 2015. Missing data are denoted as NA. 
 
-### Proof of loading data
-
-```
-Rscript script/Import_data.R
-```
-
-![](./img/screenshot_import_data.png)
 
 ## Question
 
