@@ -6,24 +6,36 @@
 # and calculate the mean, standard error of mean, and 95% CI for each city
 # then saves the table as a csv file in results folder
 #
-# Usage: Rscript scr/summarize_data.R
+# This script takes two arguments
+# Usage: Rscript src/summarize_data.R data/tidy_data.csv results/summarized_data.csv
 
 
 # load package
 suppressPackageStartupMessages(library(tidyverse))
 
-# import data
-data <- read.csv("data/tidy_data.csv")
 
-# create summarized table
-table <- data %>% 
-  group_by(city) %>% 
-  summarise(n= sum(!is.na(PM_Average)),
-            mean_PM = mean(PM_Average, na.rm = TRUE),
-            se_PM = sd(PM_Average, na.rm = TRUE)/sqrt(n)) %>% 
-  mutate(lower_ci = mean_PM - qnorm(0.975) * se_PM) %>% 
-  mutate(upper_ci = mean_PM + qnorm(0.975) * se_PM) %>% 
-  select(-"n")
+# define main function
+main <- function(){
+  
+  args <- commandArgs(trailingOnly = TRUE)
+  input <- args[1]
+  csv_path <- args[2]
+  
+  # import data
+  data <- read.csv(input)
+  
+  # create summarized table
+  table <- data %>% 
+    group_by(city) %>% 
+    summarise(n= sum(!is.na(PM_Average)),
+              mean_PM = mean(PM_Average, na.rm = TRUE),
+              se_PM = sd(PM_Average, na.rm = TRUE)/sqrt(n)) %>% 
+    mutate(lower_ci = mean_PM - qnorm(0.975) * se_PM) %>% 
+    mutate(upper_ci = mean_PM + qnorm(0.975) * se_PM)
+  
+  # output to a csv file
+  write.csv(table, csv_path, row.names = FALSE)
+}
 
-# output to a csv file
-write.csv(table, "results/summarized_data.csv", row.names = FALSE)
+# call main function
+main()
