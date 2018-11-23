@@ -4,7 +4,3 @@ script/.Rhistory
 .Rhistory
 src/.Rapp.history
 test.Rmd
-results/histogram.png
-data/tidy_data.csv
-results/boxplot.png
-results/results.csv
