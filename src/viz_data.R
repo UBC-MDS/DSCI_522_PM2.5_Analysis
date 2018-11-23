@@ -29,14 +29,15 @@ histogram <- data %>%
 boxplot <- data %>% 
   ggplot(aes(x = city, y = PM_Average)) +
   geom_boxplot() +
+  ylim(c(0,400)) +
   theme_bw() +
   ylab("Average PM2.5") +
   xlab("City") +
   ggtitle("Boxplot of PM2.5 - Beijing vs. Shanghai")
 
 # output to png
-ggsave("histogram.png", plot = histogram, path = "results/")
-ggsave("boxplot.png", plot = boxplot, path = "results/")
-
-# remove useless file
-file.remove("Rplots.pdf")
+png('results/histogram.png')
+plot(histogram)
+png('results/boxplot.png')
+plot(boxplot)
+dev.off()
