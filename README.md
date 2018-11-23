@@ -7,8 +7,14 @@ Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai
 
 [Ting Pan](https://github.com/panntingg)
 
+## Question
+
+- Question: **Is the average PM2.5 in Beijing same as that in Shanghai?**
+
+- Type of Question: Inferential.
 
 ## Data
+
 - Source: [PM2.5 Data of Five Chinese Cities from Kaggle.com](https://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities)
 
 - Context
@@ -17,15 +23,7 @@ Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai
 - Content
 <br> The time period for this data is between Jan 1st, 2010 to Dec 31st, 2015. Missing data are denoted as NA. 
 
-
-## Question
-
-- Question: **Is the average PM2.5 in Beijing same as that in Shanghai?**
-
-- Type of Question: Inferential.
-
 ## Plan
-
 
 Null Hypothesis: The average PM2.5 in Beijing is the same as the average PM2.5 in Shanghai.
 
@@ -38,3 +36,26 @@ First of all, we will select the columns of the time information and the place i
 ## How to Summarize
 
 Create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. We will also visualize the cut-off for the significance level and our test statistic on the visualization.
+
+## Usage:
+
+1. Clone this repo, and using the command line, navigate to the root of this project.
+
+2. Run the following commands:
+
+```
+Rscript src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv
+Rscript src/viz_data.R data/tidy_data.csv results/histogram.png results/boxplot.png
+Rscript src/summarize_data.R data/tidy_data.csv results/summarized_data.csv
+Rscript src/analyze_data.R data/tidy_data.csv results/results.csv results/testplot.png
+Rscript -e "rmarkdown::render('doc/report.Rmd', output_format = 'github_document')"
+Rscript -e "rmarkdown::render('doc/report.Rmd', output_format = 'pdf_document')"
+Rscript -e "rmarkdown::render('doc/report.Rmd', output_format = 'html_document')"
+```
+
+## Dependencies:
+- R & R libraries:
+    - `rmarkdown`
+    - `knitr`
+    - `tidyverse`
+    - `broom`
