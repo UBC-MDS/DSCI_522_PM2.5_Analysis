@@ -4,5 +4,6 @@ script/.Rhistory
 .Rhistory
 src/.Rapp.history
 test.Rmd
-data/BJ_tidy.csv
-data/SH_tidy.csv
+results/histogram.png
+data/tidy_data.csv
+results/boxplot.png
