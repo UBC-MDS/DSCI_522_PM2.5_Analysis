@@ -156,7 +156,7 @@ To analyze the data efficiently, we need to do data wrangling on
 \begin{itemize}
 \item
   For each table, add a column \texttt{PM\_Average} to record the
-  average daily PM2.5.
+  average PM2.5.
 \item
   For each table, add a column \texttt{city} to indicate this
   categorical variable.
@@ -182,11 +182,11 @@ year & month & day & PM\_Average & city\tabularnewline
 
 \subsection{Visualization}\label{visualization}
 
-To understand the dataset, we take two plots to visualize it.
+To understand the tidy dataset, we take two plots to visualize it.
 
 \subsubsection{Histogram}\label{histogram}
 
-\emph{Figure 1. Histograms of Beijing PM and Shanghai PM}
+\emph{Figure 1. Histograms of Beijing PM2.5 and Shanghai PM2.5}
 
 \begin{figure}
 \centering
@@ -216,8 +216,8 @@ It helps analyze the relationship between the categorical variable
 observe that the median PM2.5 of Beijing is higher than that of Beijing.
 Also, the boxplot of Shanghai is comparatively short, which suggests
 that overall PM2.5 values of Shanghai are denser. In addition, they both
-have much outliers, which reveals that ralatively high PM2.5 usually
-detected in both cities.
+have much outliers, which reveals that there are a lot of ralatively
+high PM2.5 values detected in both cities.
 
 \subsection{Data Summary}\label{data-summary}
 
@@ -227,8 +227,8 @@ independence of the two groups, the standard error of the mean of each
 city can be estimated as the sample standard deviation divided by the
 square root of the sample size \texttt{SE\ =\ s\ /\ sqrt(n)}.
 Additionally, we calculate 95\% confidence interval of PM2.5 for each
-city using asymoptotic theory: Confidence interval = (mean - 1.96 * SE,
-mean + 1.96 * SE).
+city using asymoptotic theory:
+\texttt{Confidence\ Interval\ =\ (mean\ -\ \ 1.96\ *\ SE,\ mean\ +\ \ 1.96\ *\ SE)}.
 
 \emph{Table 4. Summarize Beijing and Shanghai PM2.5 Tidy Dataset}
 
@@ -244,11 +244,11 @@ Shanghai & 1460 & 54.81167 & 0.9888218 & 52.87362 &
 \bottomrule
 \end{longtable}
 
-From \texttt{Table\ 4}, the PM means of the Beijing and Shanghai are
-totally different. Also, we are 95\% confident that the average PM in
-Beijing is between 91.98765 and 98.44522. Comparatively, we are 95\%
-confident that the average PM in Shanghai is between 52.87362 and
-56.74973.
+From \texttt{Table\ 4}, we find that the PM2.5 means of Beijing and
+Shanghai are totally different. Also, we are 95\% confident that the
+average PM2.5 in Beijing is between 91.98765 and 98.44522.
+Comparatively, we are 95\% confident that the average PM2.5 in Shanghai
+is between 52.87362 and 56.74973.
 
 \subsection{Analysis and results}\label{analysis-and-results}
 
@@ -274,8 +274,8 @@ conf.low & conf.high & method & alternative\tabularnewline
 \bottomrule
 \end{longtable}
 
-As we can see in the above table, p-value is extremely small and this is
-a strong evidence to reject the null hypothesis.
+As we can see in \texttt{Table\ 5}, p-value is extremely small and this
+is a strong evidence to reject the null hypothesis.
 
 \emph{Figure 3. Density curve of the corresponding t-distribution, 95\%
 threshold and test statistic}
@@ -290,7 +290,7 @@ The above plot shows that our test statistic is far right of the
 threshold and this is another evidence to reject the null hypothesis.
 
 In conclusion, we reject the null hypothesis that there's no difference
-between the mean PM in Beijing and Shanghai.
+between the average PM2.5 in Beijing and Shanghai.
 
 \subsection{Beyond the project}\label{beyond-the-project}
 
