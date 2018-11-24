@@ -1,11 +1,15 @@
 # DSCI 522 Analysis of PM 2.5 in Beijing and Shanghai
 Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai 
 
+## Summary: 
+This data analysis project is to perform hypothesis testing for the difference between two population means, and conduct a two-sample t-test of the null hypothesis. Also, visualization and interpretation are included.
+
 ## Team members
 
 [Wilson Deng](https://github.com/xiaoweideng)
 
 [Ting Pan](https://github.com/panntingg)
+
 
 ## Question
 
@@ -29,7 +33,7 @@ Null Hypothesis: The average PM2.5 in Beijing is the same as the average PM2.5 i
 
 Alternative Hypothesis: The average PM2.5 in Beijing is NOT the same as the average PM2.5 in Shanghai.
 
-To effectively compare the average PM2.5 in Beijing and Shanghai, we plan to do a **hypothesis test** over the two datasets. Also, two-sample t test will be applied to our question. We have learnt about how to do this in our DSCI 552 class.
+To effectively compare the average PM2.5 in Beijing and Shanghai, we plan to do a **hypothesis test** over the two datasets. Also, two-sample t-test will be applied to our question. We have learnt about how to do this in our DSCI 552 class.
 
 First of all, we will select the columns of the time information and the place information, as well as the PM2.5 values, which will be used in our project. Then, for each day, we will calculate the average PM2.5 of all places and all hours as an observation of the specific day. 
 
