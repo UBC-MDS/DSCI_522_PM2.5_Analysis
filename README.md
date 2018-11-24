@@ -1,15 +1,15 @@
 # DSCI 522 Analysis of PM 2.5 in Beijing and Shanghai
 Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai 
 
-## Summary: 
-This data analysis project is to perform hypothesis testing for the difference between two population means, and conduct a two-sample t-test of the null hypothesis. Also, visualization and interpretation are included.
-
 ## Team members
 
 [Wilson Deng](https://github.com/xiaoweideng)
 
 [Ting Pan](https://github.com/panntingg)
 
+## Project Summary
+
+This data analysis project is to perform hypothesis testing for the difference between two population means, and conduct a two-sample t-test of the null hypothesis. Also, necessary visualization and interpretation are included.
 
 ## Question
 
@@ -42,7 +42,7 @@ First of all, we will select the columns of the time information and the place i
 Create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. <br>For our t-test, we will also visualize the density curve of the corresponding t-distribution, 95% threshold and test statistic.
 
 
-## Usage:
+## Usage
 
 1. Clone this repo, and using the command line, navigate to the root of this project.
 
@@ -63,7 +63,7 @@ Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'pdf_document')"
 Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'html_document')"
 ```
 
-## Dependencies:
+## Dependencies
 - R & R libraries:
     - `rmarkdown`
     - `knitr`
