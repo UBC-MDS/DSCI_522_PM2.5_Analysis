@@ -7,7 +7,7 @@ Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai
 
 [Ting Pan](https://github.com/panntingg)
 
-## Project Summary
+## Summary
 
 This data analysis project is to perform hypothesis testing for the difference between two population means, and conduct a two-sample t-test of the null hypothesis. Also, necessary visualization and interpretation are included.
 
