@@ -36,7 +36,7 @@ main <- function(){
     summarise(PM_Average = mean(c(PM_Jingan,PM_Xuhui,PM_US.Post), na.rm = TRUE)) %>%
     mutate(city = "Shanghai")
   
-  tidy_data <- bind_rows(BJ_tidy, SH_tidy)
+  tidy_data <- bind_rows(BJ_tidy, SH_tidy) %>% arrange(year, month, day)
   
   # output two csv files
   write.csv(tidy_data, output, row.names = FALSE)

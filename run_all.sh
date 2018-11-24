@@ -12,6 +12,6 @@ Rscript src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.
 Rscript src/viz_data.R data/tidy_data.csv results/histogram.png results/boxplot.png
 Rscript src/summarize_data.R data/tidy_data.csv results/summarized_data.csv
 Rscript src/analyze_data.R data/tidy_data.csv results/results.csv results/testplot.png
-Rscript -e "rmarkdown::render('doc/report.Rmd', output_format = 'github_document')"
-Rscript -e "rmarkdown::render('doc/report.Rmd', output_format = 'pdf_document')"
-Rscript -e "rmarkdown::render('doc/report.Rmd', output_format = 'html_document')"
+Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'github_document')"
+Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'pdf_document')"
+Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'html_document')"
