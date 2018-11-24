@@ -28,7 +28,7 @@ kable(head(SH_data))
 
 To analyze the data efficiently, we need to do data wrangling on `Table 1` and `Table 2`:
 
-* For each table, add a column `PM_Average` to record the average daily PM2.5.
+* For each table, add a column `PM_Average` to record the average PM2.5.
 
 * For each table, add a column `city` to indicate this categorical variable.
 
@@ -45,11 +45,11 @@ kable(head(BJSH_data))
 
 ## Visualization
 
-To understand the dataset, we take two plots to visualize it.
+To understand the tidy dataset, we take two plots to visualize it.
 
 ### Histogram
 
-*Figure 1. Histograms of Beijing PM and Shanghai PM*
+*Figure 1. Histograms of Beijing PM2.5 and Shanghai PM2.5*
 
 ![](../results/histogram.png)
 
@@ -61,11 +61,11 @@ It shows the distributions of PM2.5 in Shanghai and Beijing. Both are right-skew
 
 ![](../results/boxplot.png)
 
-It helps analyze the relationship between the categorical variable `city` and the continuous variable `PM_Average`. We observe that the median PM2.5 of Beijing is higher than that of Beijing. Also, the boxplot of Shanghai is comparatively short, which suggests that overall PM2.5 values of Shanghai are denser. In addition, they both have much outliers, which reveals that ralatively high PM2.5 usually detected in both cities.
+It helps analyze the relationship between the categorical variable `city` and the continuous variable `PM_Average`. We observe that the median PM2.5 of Beijing is higher than that of Beijing. Also, the boxplot of Shanghai is comparatively short, which suggests that overall PM2.5 values of Shanghai are denser. In addition, they both have much outliers, which reveals that there are a lot of ralatively high PM2.5 values detected in both cities.
 
 ## Data Summary
 
-For each city, we can easily get the sample size, the sample mean, and the standard deviation of the sample mean. Then, assuming statistical independence of the two groups, the standard error of the mean of each city can be estimated as the sample standard deviation divided by the square root of the sample size `SE = s / sqrt(n)`. Additionally, we calculate 95% confidence interval of PM2.5 for each city using asymoptotic theory: Confidence interval = (mean -  1.96 * SE, mean +  1.96 * SE).
+For each city, we can easily get the sample size, the sample mean, and the standard deviation of the sample mean. Then, assuming statistical independence of the two groups, the standard error of the mean of each city can be estimated as the sample standard deviation divided by the square root of the sample size `SE = s / sqrt(n)`. Additionally, we calculate 95% confidence interval of PM2.5 for each city using asymoptotic theory: `Confidence Interval = (mean -  1.96 * SE, mean +  1.96 * SE)`.
 
 *Table 4. Summarize Beijing and Shanghai PM2.5 Tidy Dataset*
 
@@ -74,7 +74,7 @@ summarized_data <- read.csv("../results/summarized_data.csv")
 kable(head(summarized_data))
 ```
 
-From `Table 4`, the PM means of the Beijing and Shanghai are totally different. Also, we are 95% confident that the average PM in Beijing is between 91.98765 and 98.44522. Comparatively, we are 95% confident that the average PM in Shanghai is between 52.87362 and 56.74973.
+From `Table 4`, we find that the PM2.5 means of Beijing and Shanghai are totally different. Also, we are 95% confident that the average PM2.5 in Beijing is between 91.98765 and 98.44522. Comparatively, we are 95% confident that the average PM2.5 in Shanghai is between 52.87362 and 56.74973.
 
 ## Analysis and results
 
@@ -89,7 +89,7 @@ results <- read.csv("../results/results.csv")
 kable(head(results),digits = 100)
 ```
 
-As we can see in the above table, p-value is extremely small and this is a strong evidence to reject the null hypothesis.
+As we can see in `Table 5`, p-value is extremely small and this is a strong evidence to reject the null hypothesis.
 
 *Figure 3. Density curve of the corresponding t-distribution, 95% threshold and test statistic*
 
@@ -97,7 +97,7 @@ As we can see in the above table, p-value is extremely small and this is a stron
 
 The above plot shows that our test statistic is far right of the threshold and this is another evidence to reject the null hypothesis.
 
-In conclusion, we reject the null hypothesis that there's no difference between the mean PM in Beijing and Shanghai. 
+In conclusion, we reject the null hypothesis that there's no difference between the average PM2.5 in Beijing and Shanghai. 
 
 ## Beyond the project
 
