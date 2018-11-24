@@ -35,13 +35,19 @@ First of all, we will select the columns of the time information and the place i
 
 ## How to Summarize
 
-Create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. We will also visualize the cut-off for the significance level and our test statistic on the visualization.
+Create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. <br>For our t-test, we will also visualize the cut-off for the significance level and our test statistic on the visualization.
+
 
 ## Usage:
 
 1. Clone this repo, and using the command line, navigate to the root of this project.
 
 2. Run the following commands:
+
+```
+bash run_all.sh
+```
+OR
 
 ```
 Rscript src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv
