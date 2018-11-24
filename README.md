@@ -35,7 +35,7 @@ First of all, we will select the columns of the time information and the place i
 
 ## How to Summarize
 
-Create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. <br>For our t-test, we will also visualize the cut-off for the significance level and our test statistic on the visualization.
+Create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. <br>For our t-test, we will also visualize the density curve of the corresponding t-distribution, 95% threshold and test statistic.
 
 
 ## Usage:
