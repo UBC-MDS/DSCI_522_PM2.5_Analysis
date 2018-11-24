@@ -7,6 +7,10 @@ Data analysis project for DSCI 522 - Analyzing PM 2.5 in Beijing and Shanghai
 
 [Ting Pan](https://github.com/panntingg)
 
+## Summary
+
+This data analysis project is to perform hypothesis testing for the difference between two population means, and conduct a two-sample t-test of the null hypothesis. Also, necessary visualization and interpretation are included.
+
 ## Question
 
 - Question: **Is the average PM2.5 in Beijing same as that in Shanghai?**
@@ -29,7 +33,7 @@ Null Hypothesis: The average PM2.5 in Beijing is the same as the average PM2.5 i
 
 Alternative Hypothesis: The average PM2.5 in Beijing is NOT the same as the average PM2.5 in Shanghai.
 
-To effectively compare the average PM2.5 in Beijing and Shanghai, we plan to do a **hypothesis test** over the two datasets. Also, two-sample t test will be applied to our question. We have learnt about how to do this in our DSCI 552 class.
+To effectively compare the average PM2.5 in Beijing and Shanghai, we plan to do a **hypothesis test** over the two datasets. Also, two-sample t-test will be applied to our question. We have learnt about how to do this in our DSCI 552 class.
 
 First of all, we will select the columns of the time information and the place information, as well as the PM2.5 values, which will be used in our project. Then, for each day, we will calculate the average PM2.5 of all places and all hours as an observation of the specific day. 
 
@@ -38,7 +42,7 @@ First of all, we will select the columns of the time information and the place i
 Create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. <br>For our t-test, we will also visualize the density curve of the corresponding t-distribution, 95% threshold and test statistic.
 
 
-## Usage:
+## Usage
 
 1. Clone this repo, and using the command line, navigate to the root of this project.
 
@@ -59,7 +63,7 @@ Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'pdf_document')"
 Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'html_document')"
 ```
 
-## Dependencies:
+## Dependencies
 - R & R libraries:
     - `rmarkdown`
     - `knitr`
