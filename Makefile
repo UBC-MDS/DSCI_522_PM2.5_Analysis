@@ -4,10 +4,12 @@
 # This Makefile script run scripts separately
 # can render plots and tables from the codes
 # and render the final report in the doc folder
+# use `make clean` to clean output
 
 # example usage:
-# make doc/Report.md
-# make doc/Report.pdf
+# make all
+
+all : doc/Report.md doc/Report.pdf doc/Report.html
 
 data/tidy_data.csv : src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv
 	Rscript src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv
