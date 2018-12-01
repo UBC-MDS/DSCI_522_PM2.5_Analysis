@@ -31,7 +31,7 @@ main <- function(){
     xlim(c(0,400)) +
     facet_wrap(~ city) +
     theme_bw() +
-    xlab("Average PM2.5") +
+    xlab("Average PM2.5 (μg/m3)") +
     ggtitle("Histogram of PM2.5 - Beijing vs. Shanghai")
   
   # create boxplot
@@ -40,7 +40,7 @@ main <- function(){
     geom_boxplot() +
     ylim(c(0,400)) +
     theme_bw() +
-    ylab("Average PM2.5") +
+    ylab("Average PM2.5 (μg/m3)") +
     xlab("City") +
     ggtitle("Boxplot of PM2.5 - Beijing vs. Shanghai")
 
