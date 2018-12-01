@@ -6,7 +6,7 @@
 # and perform a welch two sample t test
 # then stored the result as a csv file in results folder
 #
-# This script takes three arguments
+# This script inputs tidy data and outputs results and testplot
 # Usage: Rscript src/analyze_data.R data/tidy_data.csv results/results.csv results/testplot.png
 
 # load package

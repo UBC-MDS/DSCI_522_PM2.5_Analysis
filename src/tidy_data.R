@@ -7,7 +7,7 @@
 # add city column to each dataset and combine them
 # then stored the tidy version of the data in data folder
 # 
-# This script takes two arguments
+# This script inputs two raw datasets and outputs tidy data
 # Usage: Rscript src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv
 
 # load package

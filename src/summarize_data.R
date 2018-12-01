@@ -6,7 +6,7 @@
 # and calculate the mean, standard error of mean, and 95% CI for each city
 # then saves the table as a csv file in results folder
 #
-# This script takes two arguments
+# This script inputs tidy data and outputs summarized data
 # Usage: Rscript src/summarize_data.R data/tidy_data.csv results/summarized_data.csv
 
 
