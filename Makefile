@@ -1,5 +1,5 @@
 # Makefile
-# Wilson, Nov 27 2018
+# Wilson Deng, Ting Pan, Nov 27 2018
 
 # This Makefile script run scripts separately
 # can render plots and tables from the codes

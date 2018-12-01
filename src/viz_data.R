@@ -1,6 +1,6 @@
 #! /usr/bin/env Rscript 
 # viz_data.R
-# Wilson Deng, Nov 22 2018
+# Wilson Deng and Ting Pan, Nov 22 2018
 #
 # This script imports the tidy version of the data
 # and creates a boxplot and a faceted histogram respect to Average_PM and city
