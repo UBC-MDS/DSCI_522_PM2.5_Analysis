@@ -1,6 +1,6 @@
 #! /usr/bin/env Rscript 
 # analyze_data.R
-# Wilson Deng, Nov 22 2018
+# Wilson Deng and Ting Pan, Nov 22 2018
 #
 # This script imports the tidy version of the data
 # and perform a welch two sample t test
