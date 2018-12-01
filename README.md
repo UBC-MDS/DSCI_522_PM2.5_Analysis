@@ -44,7 +44,7 @@ This would run all the scripts, create summarized table and graphs and render th
 OR you could run scrapts respectively.
 
 ```
-# run tidy_data.R, input two row datasets and output tidy data
+# run tidy_data.R, input two raw datasets and output tidy data
 # dependency: tidyverse
 make data/tidy_data.csv
 # run viz_data.R, input tidy data and output two figures

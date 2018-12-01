@@ -6,7 +6,7 @@
 # and creates a boxplot and a faceted histogram respect to Average_PM and city
 # then saves two plots in the results folder
 #
-# This script takes two arguments
+# This script inputs tidy data and outputs two figures
 # Usage: Rscript src/viz_data.R data/tidy_data.csv results/histogram.png results/boxplot.png
 
 
