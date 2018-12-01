@@ -10,7 +10,7 @@
 # make all
 
 # render the report and all other outputs
-all : doc/Report.md doc/Report.pdf doc/Report.html
+all : doc/Report.md doc/Report.html
 
 # run tidy_data.R and output tidy data
 data/tidy_data.csv : src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv
@@ -32,9 +32,6 @@ results/results.csv results/testplot.png : src/analyze_data.R data/tidy_data.csv
 doc/Report.md : doc/Report.Rmd src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv results/histogram.png results/boxplot.png results/summarized_data.csv results/results.csv results/testplot.png
 	Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'github_document')"
 
-# render pdf type of the report
-doc/Report.pdf : doc/Report.Rmd src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv results/histogram.png results/boxplot.png results/summarized_data.csv results/results.csv results/testplot.png
-	Rscript -e "rmarkdown::render('doc/Report.Rmd', output_format = 'pdf_document')"
 
 # render html type of the report
 doc/Report.html : doc/Report.Rmd src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv results/histogram.png results/boxplot.png results/summarized_data.csv results/results.csv results/testplot.png
@@ -46,4 +43,4 @@ clean :
 	rm -f results/histogram.png results/boxplot.png
 	rm -f results/summarized_data.csv
 	rm -f results/results.csv results/testplot.png
-	rm -f doc/Report.md doc/Report.pdf doc/Report.html doc/Report.tex
+	rm -f doc/Report.md doc/Report.html doc/Report.tex doc/Report.log
