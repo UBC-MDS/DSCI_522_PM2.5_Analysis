@@ -1,12 +1,12 @@
 #! /usr/bin/env Rscript 
 # viz_data.R
-# Wilson Deng, Nov 22 2018
+# Wilson Deng and Ting Pan, Nov 22 2018
 #
 # This script imports the tidy version of the data
 # and creates a boxplot and a faceted histogram respect to Average_PM and city
 # then saves two plots in the results folder
 #
-# This script takes two arguments
+# This script inputs tidy data and outputs two figures
 # Usage: Rscript src/viz_data.R data/tidy_data.csv results/histogram.png results/boxplot.png
 
 
@@ -31,7 +31,7 @@ main <- function(){
     xlim(c(0,400)) +
     facet_wrap(~ city) +
     theme_bw() +
-    xlab("Average PM2.5") +
+    xlab("Average PM2.5 (μg/m3)") +
     ggtitle("Histogram of PM2.5 - Beijing vs. Shanghai")
   
   # create boxplot
@@ -40,7 +40,7 @@ main <- function(){
     geom_boxplot() +
     ylim(c(0,400)) +
     theme_bw() +
-    ylab("Average PM2.5") +
+    ylab("Average PM2.5 (μg/m3)") +
     xlab("City") +
     ggtitle("Boxplot of PM2.5 - Beijing vs. Shanghai")
 

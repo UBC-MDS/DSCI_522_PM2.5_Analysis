@@ -1,13 +1,13 @@
 #! /usr/bin/env Rscript 
 # tidy_data.R
-# Wilson Deng, Nov 15 2018
+# Wilson Deng and Ting Pan, Nov 15 2018
 #
 # This script imports the data from Beijing_PM.csv and Shanghai_PM.csv.
 # and calculates the average PM of each hour of each place and stored as an observation of that day
 # add city column to each dataset and combine them
 # then stored the tidy version of the data in data folder
 # 
-# This script takes two arguments
+# This script inputs two raw datasets and outputs tidy data
 # Usage: Rscript src/tidy_data.R data/Beijing_PM.csv data/Shanghai_PM.csv data/tidy_data.csv
 
 # load package

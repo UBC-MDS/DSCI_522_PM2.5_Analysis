@@ -1,12 +1,12 @@
 #! /usr/bin/env Rscript 
 # summarize_data.R
-# Ting Pan, Nov 22 2018
+# Ting Pan and Wilson Deng, Nov 22 2018
 #
 # This script imports the tidy version of the data
 # and calculate the mean, standard error of mean, and 95% CI for each city
 # then saves the table as a csv file in results folder
 #
-# This script takes two arguments
+# This script inputs tidy data and outputs summarized data
 # Usage: Rscript src/summarize_data.R data/tidy_data.csv results/summarized_data.csv
 
 
