@@ -1444,9 +1444,16 @@ between the average PM2.5 in Beijing and Shanghai.
 
 There are some limitations in our analysis:
 
-  - The datasets we are using are time series data which means there
-    exists dependencies in the datasets. For example, there could be a
-    strong relationship between today’s PM2.5 and tomorrow’s PM2.5.
+  - Due to the missing data, there are several issues about our test.
+    Firstly, we could not have an accurate PM2.5 value for each day.
+    Secondly, there are a lot of days missing PM2.5 values completely so
+    we could not have a symmetric datasets, let alone the assumptions of
+    t-test.
+    
+      - The datasets we are using are time series data which means there
+        exists dependencies in the datasets. For example, there could be
+        a strong relationship between today’s PM2.5 and tomorrow’s
+        PM2.5.
     
       - We have ignore many valuable features in the datasets due to
         time constraint. For example, we could include humidity and
