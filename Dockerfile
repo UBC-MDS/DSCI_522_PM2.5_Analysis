@@ -4,26 +4,11 @@
 # use rocker/tidyverse as the base image and
 FROM rocker/tidyverse
 
-# install the rmarkdown package
+# install the rmarkdown, knitr, broom, kableExtra package
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   && install2.r --error \
     --deps TRUE \
-    rmarkdown
-
-# install the knitr package
-RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-  && install2.r --error \
-    --deps TRUE \
-    knitr
-
-# install the broom package
-RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-  && install2.r --error \
-    --deps TRUE \
-    broom
-
-# install the kableExtra package
-RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-  && install2.r --error \
-    --deps TRUE \
+    rmarkdown \
+    knitr \
+    broom \
     kableExtra
