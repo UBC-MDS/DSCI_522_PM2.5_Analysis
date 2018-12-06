@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="data:text/css;charset=utf-8,%0A%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Aa%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Aa%3Aactive%2C%0Aa%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Aimg%20%7B%0Aborder%3A%200%3B%0A%7D%0Ahr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Apre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Acode%2C%0Akbd%2C%0Apre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ainput%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Ahtml%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Ainput%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Ainput%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Atd%2C%0Ath%20%7B%0Apadding%3A%200%3B%0A%7D%0A%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Ainput%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%2C%0Aa%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Ahr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ahr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Ablockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Aol%20ol%2C%0Aul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Aul%20ul%20ol%2C%0Aul%20ol%20ol%2C%0Aol%20ul%20ol%2C%0Aol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Add%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0A%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0A%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0A%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0A%2Emarkdown%2Dbody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Aa%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0A%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0A%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Ah1%20%2Eocticon%2Dlink%2C%0Ah2%20%2Eocticon%2Dlink%2C%0Ah3%20%2Eocticon%2Dlink%2C%0Ah4%20%2Eocticon%2Dlink%2C%0Ah5%20%2Eocticon%2Dlink%2C%0Ah6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%2C%0Ah2%3Ahover%20%2Eanchor%2C%0Ah3%3Ahover%20%2Eanchor%2C%0Ah4%3Ahover%20%2Eanchor%2C%0Ah5%3Ahover%20%2Eanchor%2C%0Ah6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Ah1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%202%2E25em%3B%0Aline%2Dheight%3A%201%2E2%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E225%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Ah3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Ah4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ah5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Ah6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ap%2C%0Ablockquote%2C%0Aul%2C%0Aol%2C%0Adl%2C%0Atable%2C%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Aul%20ul%2C%0Aul%20ol%2C%0Aol%20ol%2C%0Aol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Ali%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Adl%20%7B%0Apadding%3A%200%3B%0A%7D%0Adl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Adl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ablockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Ablockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Ablockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Atable%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Atable%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Atable%20th%2C%0Atable%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Atable%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Atable%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Acode%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%2E2em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Acode%3Abefore%2C%0Acode%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Apre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0A%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0A%2Ehighlight%20pre%2C%0Apre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Apre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Apre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Apre%20code%3Abefore%2C%0Apre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0A%2Epl%2Dc1%2C%0A%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0A%2Epl%2De%2C%0A%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0A%2Epl%2Ds%20%2Epl%2Ds1%2C%0A%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0A%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0A%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0A%2Epl%2Dpds%2C%0A%2Epl%2Ds%2C%0A%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0A%2Epl%2Dsr%2C%0A%2Epl%2Dsr%20%2Epl%2Dcce%2C%0A%2Epl%2Dsr%20%2Epl%2Dsra%2C%0A%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0A%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0A%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0A%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0A%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0A%2Epl%2Dmh%2C%0A%2Epl%2Dmh%20%2Epl%2Den%2C%0A%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0A%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0A%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0A%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0A%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A%2EsourceLine%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0A%7D%0Acode%20%2Ekw%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Edt%20%7B%20color%3A%20%23ed6a43%3B%20%7D%0Acode%20%2Edv%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ebn%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Efl%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ech%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Est%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eco%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Eot%20%7B%20color%3A%20%230086b3%3B%20%7D%0Acode%20%2Eal%20%7B%20color%3A%20%23a61717%3B%20%7D%0Acode%20%2Efu%20%7B%20color%3A%20%2363a35c%3B%20%7D%0Acode%20%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%0Acode%20%2Ewa%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ecn%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Esc%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Evs%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Ess%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eim%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eva%20%7Bcolor%3A%20%23008080%3B%20%7D%0Acode%20%2Ecf%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eop%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ebu%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eex%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Epp%20%7B%20color%3A%20%23999999%3B%20%7D%0Acode%20%2Eat%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Edo%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Ean%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ecv%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ein%20%7B%20color%3A%20%23008080%3B%20%7D%0A" rel="stylesheet">
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="dsci-522-analysis-of-pm-2.5-in-beijing-and-shanghai">DSCI 522 Analysis of PM 2.5 in Beijing and Shanghai</h1>
+<p>Ting Pan, Weishun Deng<br />
+November 22, 2018</p>
+<h1 id="report">Report</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This project is to conduct research on the inferential question - <strong>Is the average PM2.5 in Beijing same as that in Shanghai?</strong> We want to explore whether the average PM2.5 in Beijing is different from that in Shanghai in general. The datasets we choose are <a href="https://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities">PM2.5 Data of Five Chinese Cities from Kaggle.com</a>, which record PM2.5 of five Chinese cities during 2010 to 2015 each day each hour. Because we only care about PM2.5 in Beijing and Shanghai, these two raw datasets are as below:</p>
+<p><em>Table 1. Beijing PM2.5 Raw Dataset</em><br />
+<table class="table" style="margin-left: auto; margin-right: auto;"><br />
+<thead><br />
+<tr><br />
+<th style="text-align:right;"><br />
+No<br />
+</th><br />
+<th style="text-align:right;"><br />
+year<br />
+</th><br />
+<th style="text-align:right;"><br />
+month<br />
+</th><br />
+<th style="text-align:right;"><br />
+day<br />
+</th><br />
+<th style="text-align:right;"><br />
+hour<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_Dongsi<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_Dongsihuan<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_Nongzhanguan<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_US.Post<br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><br />
+<tr><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+0<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+3<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+2<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+4<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+3<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+5<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+4<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+6<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+5<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table><br />
+There are four monitoring sites in Beijing:Dongsi, Dongsihuan, Nongzhanguan, US.Post.</p>
+<p><em>Table 2. Shanghai PM2.5 Raw Dataset</em><br />
+<table class="table" style="margin-left: auto; margin-right: auto;"><br />
+<thead><br />
+<tr><br />
+<th style="text-align:right;"><br />
+No<br />
+</th><br />
+<th style="text-align:right;"><br />
+year<br />
+</th><br />
+<th style="text-align:right;"><br />
+month<br />
+</th><br />
+<th style="text-align:right;"><br />
+day<br />
+</th><br />
+<th style="text-align:right;"><br />
+hour<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_Jingan<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_US.Post<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_Xuhui<br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><br />
+<tr><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+0<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+3<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+2<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+4<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+3<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+5<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+4<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+6<br />
+</td><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+5<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table><br />
+There are three monitoring sites in Shanghai:Jingan, US.Post, Xuhui.</p>
+<p>As you can see from the heads of two tables above, there are a lot of missing data in our datasets. There are several kinds of missing data in our datasets:</p>
+<ul>
+<li><p>There are <strong><em>no</em></strong> PM2.5 data at some specific hour.</p></li>
+<li><p>There are missing data at monitoring sites and there are usually only one or two sites recording PM2.5 data. This is very typical in our datasets.</p></li>
+<li><p>On some day, there are missing data for whole day.</p></li>
+</ul>
+<p>To analyze the data efficiently, we need to deal the missing data carefully. We plan to do data wrangling on <code>Table 1</code> and <code>Table 2</code> as follows:</p>
+<ul>
+<li><p>For each table, add a column <code>PM_Average</code> to record the average PM2.5 each day by removing all the missing data on that day and calculating the average of all non-NA values.</p></li>
+<li><p>For each table, add a column <code>city</code> to indicate this categorical variable.</p></li>
+<li><p>Combine the two tables into one, which is <code>Table 3</code>.</p></li>
+</ul>
+<p><em>Table 3. Beijing and Shanghai PM2.5 Tidy Dataset</em><br />
+<table class="table" style="margin-left: auto; margin-right: auto;"><br />
+<thead><br />
+<tr><br />
+<th style="text-align:right;"><br />
+year<br />
+</th><br />
+<th style="text-align:right;"><br />
+month<br />
+</th><br />
+<th style="text-align:right;"><br />
+day<br />
+</th><br />
+<th style="text-align:right;"><br />
+PM_Average<br />
+</th><br />
+<th style="text-align:left;"><br />
+city<br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+129.0000<br />
+</td><br />
+<td style="text-align:left;"><br />
+Beijing<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:left;"><br />
+Shanghai<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+2<br />
+</td><br />
+<td style="text-align:right;"><br />
+144.3333<br />
+</td><br />
+<td style="text-align:left;"><br />
+Beijing<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+2<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:left;"><br />
+Shanghai<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+3<br />
+</td><br />
+<td style="text-align:right;"><br />
+78.3750<br />
+</td><br />
+<td style="text-align:left;"><br />
+Beijing<br />
+</td><br />
+</tr><br />
+<tr><br />
+<td style="text-align:right;"><br />
+2010<br />
+</td><br />
+<td style="text-align:right;"><br />
+1<br />
+</td><br />
+<td style="text-align:right;"><br />
+3<br />
+</td><br />
+<td style="text-align:right;"><br />
+NA<br />
+</td><br />
+<td style="text-align:left;"><br />
+Shanghai<br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table><br />
+Visualization<br />
+-------------</p>
+<p>To understand the tidy dataset, we take two plots to visualize it.</p>
+<h3 id="histogram">Histogram</h3>
+<p><em>Figure 1. Histograms of Beijing PM2.5 and Shanghai PM2.5</em></p>
+<center>
+![](../results/histogram.png)
+</center>
+<p><code>Figure 1.</code> shows the distributions of PM2.5 in Shanghai and Beijing. Both are right-skewed. Looking at the distribution of Beijing, the peak occurs at 25, and the data spread is from about 0 to 400. In contrast, the peak in distribution of Shanghai occurs at 50, which is larger than that of Beijing. The data spread of Shanghai is from 0 to 250, which is much narrower.</p>
+<h3 id="boxplot">Boxplot</h3>
+<p><em>Figure 2. Boxplots of Beijing PM and Shanghai PM</em></p>
+<center>
+![](../results/boxplot.png)
+</center>
+<p><code>Figure 2.</code> helps analyze the relationship between the categorical variable <code>city</code> and the continuous variable <code>PM_Average</code>. We observe that the median PM2.5 of Beijing is higher than that of Beijing. Also, the boxplot of Shanghai is comparatively short, which suggests that overall PM2.5 values of Shanghai are denser. In addition, they both have much outliers, which reveals that there are a lot of ralatively high PM2.5 values detected in both cities.</p>
+<h2 id="data-summary">Data Summary</h2>
+<p>For each city, we can easily get the sample size, the sample mean, and the standard deviation of the sample mean. Then, assuming statistical independence of the two groups, the standard error of the mean of each city can be estimated as the sample standard deviation divided by the square root of the sample size <code>SE = s / sqrt(n)</code>. Additionally, we calculate 95% confidence interval of PM2.5 for each city using asymoptotic theory:</p>
+<p>Confidence Interval = (mean - 1.96 * SE, mean + 1.96 * SE).</p>
+<p><em>Table 4. Summarize Beijing and Shanghai PM2.5 Tidy Dataset</em></p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+city
+</th>
+<th style="text-align:right;">
+number of sample
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+standard deviation
+</th>
+<th style="text-align:right;">
+lower bound of C.I.
+</th>
+<th style="text-align:right;">
+upper bound of C.I.
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Beijing
+</td>
+<td style="text-align:right;">
+2155
+</td>
+<td style="text-align:right;">
+95.21643
+</td>
+<td style="text-align:right;">
+1.6473701
+</td>
+<td style="text-align:right;">
+91.98765
+</td>
+<td style="text-align:right;">
+98.44522
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Shanghai
+</td>
+<td style="text-align:right;">
+1460
+</td>
+<td style="text-align:right;">
+54.81167
+</td>
+<td style="text-align:right;">
+0.9888218
+</td>
+<td style="text-align:right;">
+52.87362
+</td>
+<td style="text-align:right;">
+56.74973
+</td>
+</tr>
+</tbody>
+</table>
+<p>First thing we can find out from <code>Table 4</code> is that they have different sizes of non-NA data. There should be 2191 days bwtween Jan 1st 2010 to Dec 31st, 2015, however, PM2.5 only recorded 2155 days in Beijing and 1460 days in Shanghai.</p>
+<p>We also find that the PM2.5 means of Beijing and Shanghai are totally different. Furthermore, we are 95% confident that the average PM2.5 in Beijing is between 91.98765 and 98.44522. Comparatively, we are 95% confident that the average PM2.5 in Shanghai is between 52.87362 and 56.74973.</p>
+<h2 id="analysis-and-results">Analysis and results</h2>
+<p>We performed the Welch's two sample t-test intead of student t-test in this case. The main reason is that we have a lot of missing data in both of our datasets and the sizes of two samples are different so the homogeneous assumption of student t-test may not be hold. Another reason is that when we perform Welch's t-test we will not pool the sample standard deviations and this could give us a more accurate result.</p>
+<p>The following is our test result:</p>
+<p>*Table 5. Results of two-sample t-test</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+statistic
+</th>
+<th style="text-align:right;">
+p-value
+</th>
+<th style="text-align:right;">
+degree of freedom
+</th>
+<th style="text-align:right;">
+lower bound of C.I.
+</th>
+<th style="text-align:right;">
+upper bound of C.I.
+</th>
+<th style="text-align:left;">
+method
+</th>
+<th style="text-align:left;">
+alternative
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+40.40476
+</td>
+<td style="text-align:right;">
+21.02933
+</td>
+<td style="text-align:right;">
+2.597003e-92
+</td>
+<td style="text-align:right;">
+3344.741
+</td>
+<td style="text-align:right;">
+36.63762
+</td>
+<td style="text-align:right;">
+44.17191
+</td>
+<td style="text-align:left;">
+Welch Two Sample t-test
+</td>
+<td style="text-align:left;">
+two.sided
+</td>
+</tr>
+</tbody>
+</table>
+<p>As we can see in <code>Table 5</code>, p-value is extremely small and this is a strong evidence to reject the null hypothesis.</p>
+<p><em>Figure 3. Density curve of the corresponding t-distribution, 95% threshold and test statistic</em><br />
+<center><br />
+<img src="data:image/png;base64,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+z1b955dXV0VFRX33HPPoUOH1qxZo9fr//KXv3Act27dug0bNvQq8tSpU88991z3j/GhQ4eI6LPPPuve4b333gsV0Nu3b9doNF1dXfzL/fv3E5HD4ejq6rJYLHa73Wq17t2798Ybb5w3b17Ib/1ACmh0cUjDbrdHf4eQh4Ec8WjXrl1ffPHFv/71L/4+xIYNG0pKSjo6Ourr67Va7YwZM/Lz859//vnx48cLnKTfnRmGmT179t13311UVEREU6dOPXbsmOizddu0aZPNZluzZk1KSsrIkSNPnTrV0NBARPfdd1/fnS+//PInnniC//eFCxcefPDBCRMmDB8+XOB9dbtw4UJ2drZer+dfms1mfmNlZaXJZPL5fFddddVXX301YsSITZs2hXPChIebhEJyc6m+Pqw9JRljxwv/ae+GBkwJrRYnT550u935+flpaWlpaWlDhgwhoi+//PK6664bNmxYZWXl/fff/7e//W3KlClZoRdZ6HdnnU43f/78EydO/Pa3v502bZrw0JHwL/3FF1+MHDmyuzN92bJlixcvFn6/LMuuXLly2LBhgwYN+sc//qHRaIT353Hf3BLsqWeH9YEDBw4dOlRQUHDLLbeEc8KEh4AWotVSWVlYe0oY0OG3oMvLSauV5JoQrYyMjPLyclcPHMdVV1dnZWUdOnRo48aNLMvOnz+/srKyPvTf/H53djqd11577bx586xW6+zZs3/xi18IlBT+pf1+vzaSn6Tz58+PHz9+9erV69evf/PNN8MfvHTJJZfYbLbuRG5vbyei4uLixsbGzz77jIgyMzNHjhz5P//zPzt37mxpaQm/pESFgJaGIgEN6jF06NCmpqYzZ87wLw8fPjxt2jSfz7djx47Vq1dPmjRp3bp1Z86c0el0f/7zn0OdpN+dP/744/r6+k8//XTZsmU333yz1+sVKCn8Sw8ZMuTIkSNdXV38y+eee+7RRx8NdVqWZb///e9ffvnlBw4cmDx5cphtZ97w4cO1Wu3evXv5l7t27aqoqEhPT9+6devdd9/d3b52uVxEZDAYwj9zokJAS0OS5VR4EU3HASpx5ZVX3nDDDffcc8/Bgwd37Ngxc+bMpKQkg8HgcDgWLly4fv36kydPvv/++21tbfywNo1G09zc7PF4ep6k351TU1NdLtcnn3zS3Nz88ssvr1mz5syZM21tbUFPGP6lp06dqtfr58yZ88UXX2zcuHH58uUjRowgojfffPO9997r9U4/+uijo0eP/vSnPz106NCub/CRGkr3efLy8u68884lS5Z8+eWXdXV1L7zwwi9+8QuNRvODH/zgwoULzzzzTENDw549ex5++OEf/vCHOTk50X0mCSHqm5YRiLtRHE4n9/jjYe350EMP8aPuBYQ5imPp0qULFiwI56KPPcaJvWMcFYzi4IINs+vo6Ljnnnvy8/Nzc3O7h9kFAoGlS5cWFxcnJyeXl5e/+OKL/A/AypUrMzMz58+f3/Oc/e4cCAQeeeSR7OzsgoKCmTNnHj58eOzYsU899VTPfbrHZvR7tp7D7Orr62+66ab09PTLLrts+fLlAsPsXnjhhb4xcujQoe4d+o7i6Hkej8czc+ZMs9l8+eWXP/vss92/Dps3bx49erTRaOQfVBH6aAbSKA4NF6zbPkZWrVr18MMPiziQYRiWZeX/L09bGxUXh/Wgyr333nvVVVcJ9wlyHGexWHJzc4X/V/i73/3u6NGjb7zxRr8X1WqVeVDF5/NptVqdLr6HADEM43Q6s+P/NqvH4zEajUpXES2fz+fz+cL6b+jUqXTrrTRzZuyLEsPtdptMJhEHBgKB6urqHTt2pKWldW9EF4c00AcNAJJDQEtDkWF2AJDYENBCkpNp4sSw9pRqLg6KpAU9cSJ9M+QfABKQrN2IDMO43W4RB/J3EgRmYIkRvZ7+9CcKp2SbzabX64XfHd/d73a7hfugk5OTbTZbON+ov/yFiMIqT1osy2o0mqSk+P7rzv9QifuBVBXRv1aqwrIsy7LhvJEUlmV8Pkatb9nv94tOub4bZQ1onU4nrvtcqZuE4XO5XAUFBcLvjuM4r9drMpmEA7qgoMDpdIr7RskjYW4SMgyj5u9zmBLpJmFYH4dWqzUYDGr94KK5Sdh3Y3w3gtQDc3EAgOQQ0BLgh2lLeJPQ7XbL358DAGqDgBbS1hbWXTi73a7VaqX6b2ZaWlpSUlI4jWitltrbJbkmAKgRAloC/Bi7iCYlEKDRaNLT09HLMZDxi1HxU218+OGHhYWF9957r9JFgQIQ0BKQcBA0D9NxQLeVK1fedtttq1evFtjnwIEDEyZM6LugX6jt3f7whz9ceumlfU8Yavubb77Zd8HctWvXhnMsiICAloDkAZ2RkYFnVYDn8XiuvPLKno//9uJyuW699dZhw4bV1dWtXLly27ZtS5YsEdjerbm5ecGCBX1PGGo7Ed10003be/j973+fmZl5ww03hHMsiBDfI6ViLSuLPvyw/90knMqOF+bDhFu2kEQPx4Dyjhw5Mn/+/CNHjgwZMqR7UpdJkybt3Llz165ddXV169evv/baa7Oysj744IOeBx46dKi9vf2ll15KTk4eNmxYc3Pz73//eyL69NNPg27nBQKBn//85xUVFRcvXux5tlDbeQUFBQUFBfy/WZZ98sknX3311fLy8nCOBRHQghYS5pOEEo6x44U50g5PEiYMq9U6YcKE0tLSnTt3/r//9/+6G6Fbtmz57ne/+9JLL61fv56IZs+efc899/Q6dty4cVarlX++qa6u7p///OeECROIaPz48UG381atWuXxePq2dkNt7+uVV17Jzs6+6667RBwLYUILWgKx6OJAH/SA8uabb6alpb3xxhvJyckjR45sbm7+5S9/2Xe3oIsE6vV6fgRRrwX99Ho9v/pf34X+Tpw48cwzz3zyySf8sq3dQm3vy263L1u2bNu2bSKOhfChBS0BBDRE6cSJE9dcc01ycjL/8rrrrhNxklAL+vXa7vf7f/azny1dunTw4ME9dwu1PaiXXnqp51qxER0L4UNAC/F4aMWK/neLRR90OAFdU0OdnRJeFhSj1Wp7DtOMaMjmqVOnjhw5Qn0W9GtsbAy6/aWXXmJZdsqUKWfPnu3o6GAY5uzZs263O9T2vlf0+/2vv/76/fff370l/GMhIghoIS4X/epX/e8meQs6zHHQjz+uwExJEAtVVVWffPKJ/5u1Ifbs2RP+sdu3b7/jjju4Pgv6bd26Nej2kydPHjp0qLS0tKSkZMGCBa2trSUlJRs2bAi1ve8VP/jgA47jJva4PxP+sRARBLQEYjEOGsPsBpR77rnH6XTOmjXr2LFjmzZt+t///d+guwVdJPDmm29uaWl54oknei3o94Mf/CDo9rVr13avqLR+/fri4mKO42bNmhVqe9/rvv/++9/73vd6LgQucCxEAwEtAaVGcUDCyMrK2rFjR2Nj47hx45555pkNGzaMHj26b0fHa6+99sc//rHXxuLi4k2bNm3btm3kyJF33HHHmDFj/u///o+ILr300qDbReh5XY7jNm/efO2114o7FURG3PqG4sTdorEWC1dd3f9uEydOfO+99/rdLcxF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" /><br />
+</center><br />
+The above plot shows that our test statistic is far right of the threshold and this is another evidence to reject the null hypothesis.</p>
+<p>In conclusion, we reject the null hypothesis that there's no difference between the average PM2.5 in Beijing and Shanghai.</p>
+<h2 id="beyond-the-project">Beyond the project</h2>
+<p>There are some limitations in our analysis:</p>
+<ul>
+<li><p>Due to the missing data, there are several issues about our test. Firstly, we could not have an accurate PM2.5 value for each day. Secondly, there are a lot of days missing PM2.5 values completely so we could not have a symmetric datasets, let alone the assumptions of t-test.</p></li>
+<li><p>The datasets we are using are time series data which means there exists dependencies in the datasets. For example, there could be a strong relationship between today's PM2.5 and tomorrow's PM2.5.</p></li>
+<li><p>We have ignore many valuable features in the datasets due to time constraint. For example, we could include humidity and temperature of each day and create a regression model with PM2.5 value.</p></li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><p>UCI. “PM2.5 Data of Five Chinese Cities.” RSNA Pneumonia Detection Challenge | Kaggle, 22 Aug. 2017, <a href="http://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities" class="uri">http://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities</a>.</p></li>
+<li><p>“Welch's t-Test.” Wikipedia, Wikimedia Foundation, 25 Oct. 2018, <a href="http://en.wikipedia.org/wiki/Welch's_t-test" class="uri">http://en.wikipedia.org/wiki/Welch's_t-test</a>.</p></li>
+</ul>
+
+</body>
+</html>
