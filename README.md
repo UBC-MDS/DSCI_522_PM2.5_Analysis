@@ -92,9 +92,12 @@ docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/dsci_522_pm2.5_analysis wilsonden
 
 
 ## Dependencies
-- R & R libraries:
+
+- R version 3.5.1
+
+- R libraries:
     - `rmarkdown` Version 1.10
     - `knitr` Version 1.20
     - `tidyverse` Version 1.2.1
     - `broom` Version 0.5.0
-    - `kableExtra` Version 0.9.0
+    - `plyr` Version 1.8.4
