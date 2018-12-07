@@ -3,16 +3,14 @@ title: "DSCI 522 Analysis of PM 2.5 in Beijing and Shanghai"
 author: "Ting Pan, Weishun Deng"
 date: "November 22, 2018"
 output: github_document
-always_allow_html: yes
 ---
 # Report
 
 ## Introduction
 This project is to conduct research on the inferential question - **Is the average PM2.5 in Beijing same as that in Shanghai?** We want to explore whether the average PM2.5 in Beijing is different from that in Shanghai in general. The datasets we choose are [PM2.5 Data of Five Chinese Cities from Kaggle.com](https://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities), which record PM2.5 of five Chinese cities during 2010 to 2015 each day each hour. Because we only care about PM2.5 in Beijing and Shanghai, these two raw datasets are as below:
 
-```{r, echo = FALSE}
+```{r echo = FALSE}
 library(knitr)
-library(kableExtra)
 suppressPackageStartupMessages(library(tidyverse))
 BJ_data <- read.csv("../data/Beijing_PM.csv")
 SH_data <- read.csv("../data/Shanghai_PM.csv")
@@ -24,16 +22,16 @@ SH_data <- SH_data %>%
 
 
 *Table 1. Beijing PM2.5 Raw Dataset*
-```{r, echo = FALSE}
-kable(head(BJ_data)) %>% kable_styling(position = "center")
+```{r echo = FALSE}
+kable(head(BJ_data))
 ```
 
 There are four monitoring sites in Beijing:Dongsi, Dongsihuan, Nongzhanguan, US.Post.
 
 
 *Table 2. Shanghai PM2.5 Raw Dataset*
-```{r, echo = FALSE}
-kable(head(SH_data)) %>% kable_styling(position = "center")
+```{r echo = FALSE}
+kable(head(SH_data))
 ```
 
 There are three monitoring sites in Shanghai:Jingan, US.Post, Xuhui.
@@ -55,9 +53,9 @@ To analyze the data efficiently, we need to deal the missing data carefully. We 
 * Combine the two tables into one, which is `Table 3`.
 
 *Table 3. Beijing and Shanghai PM2.5 Tidy Dataset*
-```{r fig.align="center", echo = FALSE}
+```{r echo = FALSE}
 BJSH_data <- read.csv("../data/tidy_data.csv")
-kable(head(BJSH_data)) %>% kable_styling(position = "center")
+kable(head(BJSH_data))
 ```
 
 
@@ -69,9 +67,9 @@ To understand the tidy dataset, we take two plots to visualize it.
 
 *Figure 1. Histograms of Beijing PM2.5 and Shanghai PM2.5*
 
-<center>
+
 ![](../results/histogram.png)
-</center>
+
 
 `Figure 1.` shows the distributions of PM2.5 in Shanghai and Beijing. Both are right-skewed. Looking at the distribution of Beijing, the peak occurs at 25, and the data spread is from about 0 to 400. In contrast, the peak in distribution of Shanghai occurs at 50, which is larger than that of Beijing. The data spread of Shanghai is from 0 to 250, which is much narrower.
 
@@ -79,9 +77,9 @@ To understand the tidy dataset, we take two plots to visualize it.
 
 *Figure 2. Boxplots of Beijing PM and Shanghai PM*
 
-<center>
+
 ![](../results/boxplot.png)
-</center>
+
 
 `Figure 2.` helps analyze the relationship between the categorical variable `city` and the continuous variable `PM_Average`. We observe that the median PM2.5 of Beijing is higher than that of Beijing. Also, the boxplot of Shanghai is comparatively short, which suggests that overall PM2.5 values of Shanghai are denser. In addition, they both have much outliers, which reveals that there are a lot of ralatively high PM2.5 values detected in both cities.
 
@@ -94,15 +92,15 @@ Confidence Interval = (mean -  1.96 * SE, mean +  1.96 * SE).
 
 *Table 4. Summarize Beijing and Shanghai PM2.5 Tidy Dataset*
 
-```{r fig.align="center", echo = FALSE}
+```{r echo = FALSE, message=FALSE}
+library(plyr)
 summarized_data <- read.csv("../results/summarized_data.csv")
-plyr::rename(summarized_data, c("n" = "number of sample",
+rename(summarized_data, c("n" = "number of sample",
                           "mean_PM" = "mean",
                           "se_PM" = "standard deviation",
                           "lower_ci" = "lower bound of C.I.",
                           "upper_ci" = "upper bound of C.I.")) %>%
-  kable() %>%
-  kable_styling(position = "center")
+  kable()
 ```
 
 First thing we can find out from `Table 4` is that they have different sizes of non-NA data. There should be 2191 days bwtween Jan 1st 2010 to Dec 31st, 2015, however, PM2.5 only recorded 2155 days in Beijing and 1460 days in Shanghai.
@@ -115,27 +113,27 @@ We performed the Welch's two sample t-test intead of student t-test in this case
 
 The following is our test result:
 
-*Table 5. Results of two-sample t-test
+*Table 5. Results of two-sample t-test*
 
-```{r fig.align="center", echo = FALSE}
+```{r echo = FALSE}
+library(plyr)
 results <- read.csv("../results/results.csv")
 results %>%
   select(-estimate1,-estimate2) %>% 
-  plyr::rename(c("p.value" = "p-value",
+  rename(c("p.value" = "p-value",
            "parameter" = "degree of freedom",
            "conf.low" = "lower bound of C.I.",
            "conf.high" = "upper bound of C.I.")) %>%
   head() %>% 
-  kable(digits = 100) %>%
-  kable_styling(position = "center")
+  kable(digits = 100)
 ```
 
 As we can see in `Table 5`, p-value is extremely small and this is a strong evidence to reject the null hypothesis.
 
 *Figure 3. Density curve of the corresponding t-distribution, 95% threshold and test statistic*
-<center>
+
 ![](../results/testplot.png)
-</center>
+
 The above plot shows that our test statistic is far right of the threshold and this is another evidence to reject the null hypothesis.
 
 In conclusion, we reject the null hypothesis that there's no difference between the average PM2.5 in Beijing and Shanghai. 
@@ -154,6 +152,6 @@ There are some limitations in our analysis:
 ## Reference
 
 
-- UCI. “PM2.5 Data of Five Chinese Cities.” RSNA Pneumonia Detection Challenge | Kaggle, 22 Aug. 2017, http://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities.
+- UCI. "PM2.5 Data of Five Chinese Cities." RSNA Pneumonia Detection Challenge | Kaggle, 22 Aug. 2017, http://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities.
 
-- “Welch's t-Test.” Wikipedia, Wikimedia Foundation, 25 Oct. 2018, http://en.wikipedia.org/wiki/Welch's_t-test.
+- "Welch's t-Test." Wikipedia, Wikimedia Foundation, 25 Oct. 2018, http://en.wikipedia.org/wiki/Welch's_t-test.
