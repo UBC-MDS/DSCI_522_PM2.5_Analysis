@@ -46,9 +46,6 @@ make results/results.csv results/testplot.png
 # input all above results and render md version of the report
 # dependency: rmarkdownm, knitr, tidyverse and kableExtra
 make doc/Report.md
-# render html version of the report
-# dependency: rmarkdownm, knitr, tidyverse and kableExtra
-doc/Report.html
 ```
 
 You could find our final report in the `doc` folder after running the script. OR you could click [Final Report](https://github.com/UBC-MDS/DSCI_522_PM2.5_Analysis/blob/master/doc/Report.md).
@@ -58,7 +55,7 @@ The following command cleans outputs.
 make clean
 ```
 
-The following is the visualization of Makefile:
+The following is the dependency diagram of the Makefile:
 
 ![](Makefile.png)
 
@@ -85,3 +82,9 @@ docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/dsci_522_pm2.5_analysis wilsonden
     - `tidyverse` Version 1.2.1
     - `broom` Version 0.5.0
     - `plyr` Version 1.8.4
+
+## Release Version
+
+- [Version 3.0](https://github.com/UBC-MDS/DSCI_522_PM2.5_Analysis/tree/V3.0)
+- [Version 2.0](https://github.com/UBC-MDS/DSCI_522_PM2.5_Analysis/tree/v2.0)
+- [Version 0.1](https://github.com/UBC-MDS/DSCI_522_PM2.5_Analysis/tree/v0.1)
