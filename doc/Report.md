@@ -112,7 +112,9 @@ Analysis and results
 
 ### Hypothesis Testing
 
-The null hypothesis: The average PM2.5 in Beijing and Shanghai are the same. The alternative hypothesis: The average PM2.5 in Beijing and Shanghai are different.
+The null hypothesis: The average PM2.5 in Beijing and Shanghai are the same.
+
+The alternative hypothesis: The average PM2.5 in Beijing and Shanghai are different.
 
 We performed the Welch's two sample t-test intead of student t-test in this case. The main reason is that we have a lot of missing data in both of our datasets and the sizes of two samples are different so the homogeneous assumption of student t-test may not be hold. Another reason is that when we perform Welch's t-test we will not pool the sample standard deviations and this could give us a more accurate result.
 
