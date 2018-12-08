@@ -7,10 +7,12 @@ November 22, 2018
 
 ## Introduction
 
+Particulate matter(PM) - also known as Atmospheric aerosol particles - are microscopic solid or liquid matter suspended in the atmosphere of Earth. PM2.5 are fine particles with a diameter of 2.5 μm or less. They have impacts on climate and precipitation that adversely affect human health. In other words, it's used as a measure of pollution. PM2.5 readings are often included in air quality reports from environmental authorities and companies. 
+
 This project is to conduct research on the inferential question - **Is
 the average PM2.5 in Beijing same as that in Shanghai?** We want to
 explore whether the average PM2.5 in Beijing is different from that in
-Shanghai in general. The datasets we choose are [PM2.5 Data of Five
+Shanghai in general, so that we can compare the air quality of these two cities. The datasets we choose are [PM2.5 Data of Five
 Chinese Cities from
 Kaggle.com](https://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities),
 which record PM2.5 of five Chinese cities during 2010 to 2015 each day
