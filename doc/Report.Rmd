@@ -142,12 +142,6 @@ results %>%
 
 As we can see in `Table 5`, p-value is extremely small and this is a strong evidence to reject the null hypothesis.
 
-*Figure 3. Density curve of the corresponding t-distribution, 95% threshold and test statistic*
-
-![](../results/testplot.png)
-
-The above plot shows that our test statistic is far right of the threshold and this is another evidence to reject the null hypothesis.
-
 In conclusion, we reject the null hypothesis that there's no difference between the average PM2.5 in Beijing and Shanghai. 
 
 ## Beyond the project
