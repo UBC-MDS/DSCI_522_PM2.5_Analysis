@@ -18,7 +18,7 @@ This data analysis project deals one inferential question: **Is the average PM2.
 As a result, we have sufficient evidence to reject the claim that the average PM2.5 in Beijing and Shanghai are the same.
 
 ## Usage
-<br>
+
 1. Clone this repo, and using the command line, navigate to the root of this project.
 
 2. Run the following commands:
@@ -40,11 +40,11 @@ make results/histogram.png
 # run summarize_data.R, input tidy data and output summarized data
 # dependency: tidyverse
 make results/summarized_data.csv
-# run analyze_data.R, input tidy data and output results and testplot
+# run analyze_data.R, input tidy data and output results
 # dependency: tidyverse, broom
-make results/results.csv results/testplot.png
+make results/results.csv
 # input all above results and render md version of the report
-# dependency: rmarkdownm, knitr, tidyverse and kableExtra
+# dependency: rmarkdownm, knitr, tidyverse and plyr
 make doc/Report.md
 ```
 

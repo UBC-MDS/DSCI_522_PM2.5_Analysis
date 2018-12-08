@@ -121,6 +121,12 @@ We also find that the PM2.5 means of Beijing and Shanghai are totally different.
 
 ## Analysis and results
 
+
+### Hypothesis Testing 
+
+The null hypothesis: The average PM2.5 in Beijing and Shanghai are the same.
+The alternative hypothesis: The average PM2.5 in Beijing and Shanghai are different.
+
 We performed the Welch's two sample t-test intead of student t-test in this case. The main reason is that we have a lot of missing data in both of our datasets and the sizes of two samples are different so the homogeneous assumption of student t-test may not be hold. Another reason is that when we perform Welch's t-test we will not pool the sample standard deviations and this could give us a more accurate result.
 
 The following is our test result:
@@ -142,17 +148,19 @@ results %>%
 
 As we can see in `Table 5`, p-value is extremely small and this is a strong evidence to reject the null hypothesis.
 
-In conclusion, we reject the null hypothesis that there's no difference between the average PM2.5 in Beijing and Shanghai. 
+In conclusion, we reject the null hypothesis that there's no difference between the average PM2.5 in Beijing and Shanghai. This result is accord with our common sense of air conditions in China. Beijing has much more serious air pollution problems than other cities, so its PM2.5 level should be higher.
+
+
 
 ## Beyond the project
 
-There are some limitations in our analysis:
+There are still some limitations in our analysis. 
 
-  - Due to the missing data, there are several issues about our test. Firstly, we could not have an accurate PM2.5 value for each day. Secondly, there are a lot of days missing PM2.5 values completely so we could not have a symmetric datasets, let alone the assumptions of t-test.
+First, due to the missing data, there are several issues about our test. We could not have an accurate average PM2.5 value for each day because lacking PM2.5 values at some specific times. Also, there are a lot of days missing PM2.5 values completely so we could not have symmetric datasets, let alone the assumptions of t-test.
 
-  - The datasets we are using are time series data which means there exists dependencies in the datasets. For example, there could be a strong relationship between today's PM2.5 and tomorrow's PM2.5.
-  
-  - We have ignore many valuable features in the datasets due to time constraint. For example, we could include humidity and temperature of each day and create a regression model with PM2.5 value.
+Secondly, the datasets we used are time series data which means there exists dependencies in the datasets. There could be a strong relationship between today's PM2.5 and tomorrow's PM2.5.  However, we didn't take any approach of time series analysis.
+
+Additionally, we ignored many valuable features in the datasets due to time constraint. For example, we could include humidity and temperature of each day and create a regression model with PM2.5 value, to understand how the different features impact the response variable.
 
 
 ## Reference
