@@ -57,7 +57,7 @@ make clean
 
 The following is the dependency diagram of the Makefile:
 
-![](Makefile.png)
+![](dependency_graph.png.png)
 
 <br> To run this analysis using Docker, clone/download this repository, use the command line to navigate to the root of this project on your computer, and then type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).
 
